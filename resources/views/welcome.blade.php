@@ -9,10 +9,12 @@
   <div class="row">
     <div class="col-md-6">
 
-      <form action="#" method="post">
+      <form action="{{ route('signup') }}" method="post">
+         {{ csrf_field() }}
+         {!! Form::hidden('user_id', 1) !!}
         <div class="form-group">
           <label for="email"> Your Email</label>
-          <input class="form-control" type="text" id="email" >
+          <input class="form-control" type="email" id="email" >
 
         </div>
 
@@ -29,6 +31,7 @@
 
         </div>
         <button type="submit" class="btn btn-primary" >Submit</button>
+
 
 
       </form>
